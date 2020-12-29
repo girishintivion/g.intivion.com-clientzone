@@ -21,7 +21,7 @@ class Dashboard extends CI_Controller {
 
                 $uri_1 = $this->uri->segment(1);
                 all_lang($uri_1);
-                //gitsetup
+                
      
         }
         
