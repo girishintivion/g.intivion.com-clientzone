@@ -1,0 +1,816 @@
+@charset "utf-8";
+/* CSS Document */
+/*** MONTSERRAT FONT ***/
+@font-face { font-family: 'Montserrat Thin'; font-style: normal; font-weight: normal; src: local('Montserrat Thin'), url('../fonts/Montserrat/Montserrat-Thin.woff') format('woff'); }
+@font-face { font-family: 'Montserrat Light'; font-style: normal; font-weight: normal; src: local('Montserrat Light'), url('../fonts/Montserrat/Montserrat-Light.woff') format('woff'); }
+@font-face { font-family: 'Montserrat Regular'; font-style: normal; font-weight: normal; src: local('Montserrat Regular'), url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'); }
+@font-face { font-family: 'Montserrat Medium'; font-style: normal; font-weight: normal; src: local('Montserrat Medium'), url('../fonts/Montserrat/Montserrat-Medium.woff') format('woff'); }
+@font-face { font-family: 'Montserrat SemiBold'; font-style: normal; font-weight: normal; src: local('Montserrat SemiBold'), url('../fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'); }
+@font-face { font-family: 'Montserrat Bold'; font-style: normal; font-weight: normal; src: local('Montserrat Bold'), url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff'); }
+@font-face { font-family: 'Montserrat Black'; font-style: normal; font-weight: normal; src: local('Montserrat Black'), url('../fonts/Montserrat/Montserrat-Black.woff') format('woff'); }
+/*Bootstrap Fonts */
+@font-face { font-family: 'Glyphicons Halflings'; src: url('../fonts/glyphicons-halflings-regular.eot'); src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg'); }
+/***** Common CSS Style *****/
+body { background: #fff; font-family: 'Montserrat Regular'; font-size: 14px; overflow-x:hidden; color:#6b6b6b; margin:0 auto; }
+a, a:focus, a:hover { color:#000; text-decoration:none; }
+a, a:focus, a:hover, a:active, a.active:hover, a.active:focus, select, option, select:focus, button, button:focus { outline:none; }
+.aligncenter { margin:0 auto; display: inline-block; }
+.transitions { transition: all .8s ease; -webkit-transition: all .8s ease; -ms-transition: all .8s ease; -o-transition: all .8s ease; -moz-transition: all .8s ease; }
+.relative { position:relative; }
+.row-flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; align-items: center; }
+.row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.align { align-items: center; }
+.no-padding { padding-left:0; padding-right:0; }
+.no-left-pad { padding-left:0; }
+.no-right-pad { padding-right:0; }
+.less-pad { padding-left:5px; padding-right:5px; }
+span, a, abbr { display:inline-block; }
+.inline-divs div { display: inline-block; }
+.list { list-style: none; padding: 0; margin: 0; line-height: normal; margin-bottom: 20px; }
+.list li { position: relative; padding-left: 15px; padding: 5px 5px 5px 22px; }
+.list li:before { content: '\f101'; color: #fff; position: absolute; left: 0; top: 4px; font-size: 20px; vertical-align: middle; font-family: 'Fontawesome'; }
+.no-margin { margin:0; }
+/***** Common Spacing CSS Style *****/
+.padding10x { padding: 10px; }
+.padding20x { padding: 20px; }
+.padding1x { padding-top: 10px; padding-bottom: 10px; }
+.padding2x { padding-top: 20px; padding-bottom: 20px; }
+.padding3x { padding-top: 30px; padding-bottom: 30px; }
+.padding4x { padding-top: 40px; padding-bottom: 40px; }
+.padding5x { padding-top: 50px; padding-bottom: 50px; }
+.padding6x { padding-top: 60px; padding-bottom: 60px; }
+.paddingtop1x { padding-top: 10px; }
+.paddingtop2x { padding-top: 20px; }
+.paddingtop3x { padding-top: 30px; }
+.paddingtop4x { padding-top: 40px; }
+.paddingtop5x { padding-top: 50px; }
+.paddingtop6x { padding-top: 60px; }
+.paddingtop7x { padding-top: 70px; }
+.paddingtop8x { padding-top: 80px; }
+.paddingbottom1x { padding-bottom: 10px; }
+.paddingbottom2x { padding-bottom: 20px; }
+.paddingbottom3x { padding-bottom: 30px; }
+.paddingbottom4x { padding-bottom: 40px; }
+.paddingbottom5x { padding-bottom: 50px; }
+.paddingbottom6x { padding-bottom: 60px; }
+.paddingbottom7x { padding-bottom: 70px; }
+.paddingbottom8x { padding-bottom: 80px; }
+.spacetop-xs { margin-top: 5px; }
+.spacetop1x { margin-top: 10px; }
+.spacetop2x { margin-top: 20px; }
+.spacetop3x { margin-top: 30px; }
+.spacetop4x { margin-top: 40px; }
+.spacetop5x { margin-top: 50px; }
+.spacetop6x { margin-top: 60px; }
+.spacetop7x { margin-top: 70px; }
+.spacetop8x { margin-top: 80px; }
+.spacebottom1x { margin-bottom: 10px; }
+.spacebottom2x { margin-bottom: 20px; }
+.spacebottom3x { margin-bottom: 30px; }
+.spacebottom4x { margin-bottom: 40px; }
+.spacebottom5x { margin-bottom: 50px; }
+.spacebottom6x { margin-bottom: 60px; }
+/***** Common Heading CSS Style *****/
+.lg-heading, .medium-heading, .small-heading, .xs-heading { position:relative; }
+.lg-heading, .medium-heading, .small-heading, .xs-heading { font-family: "Montserrat SemiBold"; font-size: 24px; color: #3d3d3d; margin-top: 0; margin-bottom: 20px; text-transform: capitalize; }
+.medium-heading { font-family: "Montserrat Medium"; font-size: 20px; margin-top: 0; margin-bottom: 15px; }
+.small-heading { font-family: 'Montserrat Medium'; font-size: 18px; margin-top: 10px; margin-bottom: 10px; }
+.xs-heading { font-family:' Montserrat Regular'; font-size: 16px; color: #fca500; margin-top: 0; margin-bottom: 15px; }
+.lg-text { font-size: 22px; }
+.md-text { font-size: 18px; }
+.sm-text { font-size: 16px; color:#000; }
+.black { color: #000; }
+/***** Header CSS Style *****/
+header { position: relative; background: #fff; box-shadow: 0px 0px 12px 0px rgba(173,173,173,0.4); }
+.logo {
+    padding: 10px 30px 10px 15px;
+    width: 270px;
+    max-width: 270px;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #989898;
+}
+.navbar-bars { display: inline-block; margin-left: 0; margin-right: 0; position: absolute; left: 290px; top: 20px; z-index: 1; }
+.top-header-right { display: flex; justify-content: flex-end; padding-top: 14px; padding-bottom: 14px; }
+.navbar-bars .navbar-toggle { background: transparent; outline: none; border: none; color: #3d3d3d; font-size: 22px; cursor: pointer; display: block; padding: 0; float: none; margin: 0; border-radius: 0; }
+.user-detail, .notification-detail { float: right; position: relative; margin-left: 18px; padding: 10px 30px 10px 12px; background: #fca500; color: #fff; }
+.user-detail a, .user-detail a:hover, .user-detail a:focus { color: #fff; text-decoration:none; }
+.user-detail a span i { padding-right: 8px; font-size: 15px; }
+.user-detail a span { position:relative; }
+.user-detail a span:after { position:absolute; content:"\f107"; top:-1px; right: -20px; font-size:14px; font-family: 'Fontawesome'; }
+.user-dropdown, .notification-dropdown { position: absolute; width:100%; top: 100%; left: 0; z-index: 1000; display: none; float: left; padding: 10px 0; text-align: center; list-style: none; background-color: #fff; color:#808080; border: 1px solid #adadad; }
+.user-dropdown a, .user-dropdown a:hover, .user-dropdown a:focus { color: #808080; text-decoration:none; }
+.user-dropdown span { display: inline-block; padding: 0 10px; border-right: 1px solid #808080; }
+.user-dropdown span:last-child { border-right: none; }
+.notification-detail { padding: 0; background: #dadada; border-radius: 22px; margin-left: 0; margin-top: 4px; }
+.notification-detail a { color:#20a0a7; text-decoration:none; padding: 8px 11px; }
+.notification-detail a:hover, .notification-detail a:focus { text-decoration:none; }
+.notification-detail abbr { position: absolute; right: -8px; top: -5px; background: #da0000; color: #fff; width: 20px; display: flex; height: 20px; text-align: center; font-family: 'Montserrat SemiBold'; font-size: 11px; justify-content: center; align-items: center; }
+.notification-dropdown { width: 238px; padding: 0; /*height: 300px; overflow-y: scroll;*/ }
+.notification-dropdown .notification-menu, .notification-dropdown > ul.notification-menu { margin: 0 auto; padding: 0; list-style: none; text-align: left; height: 250px; overflow-y: scroll; }
+.notification-menu > li { padding: 5px 0; }
+/*** Language Css ****/
+.swich-language { padding: 0; position: relative; cursor: pointer; margin-top: 6px; margin-left: 10px; }
+.lang-dropdown-wrapper { padding: 0 10px 0 5px; width: auto; }
+.lang-dropdown .drop-down .button a.select-list-link { color: #6b6b6b; position: relative; float: right; }
+.lang-dropdown .drop-down select { display: none; }
+.lang-dropdown .drop-down .button span.fa.fa-angle-down { position: relative; height: auto; width: auto; top: 0; right: 0; left: 5px; margin: 0; font-family: 'Fontawesome'; font-size: 15px; }
+.lang-dropdown .drop-down .select-list li { display: none; list-style: none; }
+.lang-dropdown .drop-down .select-list li:hover { background:#eeeeee; }
+.lang-dropdown .drop-down .select-list li a { display: block; }
+.lang-dropdown .drop-down .button:hover .select-list { display:block; }
+.lang-dropdown .drop-down .select-list li span { background-color: #fff; background-position: right 5px center; background-repeat: no-repeat; box-sizing: border-box; color: #6b6b6b; cursor: pointer; display: inline-block; font-size: 13px; min-height: auto; min-width: auto; opacity: 1; padding: 6px 32px 6px 6px; text-align: left; text-transform: capitalize; width: 100%; }
+.lang-dropdown .drop-down .select-list li span:hover, .lang-dropdown .drop-down .select-list li span:focus { opacity: 1; background-color:#eeeeee; }
+.lang-dropdown .drop-down { display: inline-block; margin-top: 0; position: relative; width: 60px; }
+.lang-dropdown .drop-down .button { width: 100%; }
+.lang-dropdown .drop-down .button span { background-position: right 1px center; background-repeat: no-repeat; background-size: 18px 12px; border: medium none; color: #6b6b6b; cursor: pointer; display: inline-block; font-family: 'Montserrat Medium'; font-size: 14px; line-height: normal; padding: 0; text-align: left; text-transform: capitalize; vertical-align: middle; width: 80%; }
+.lang-dropdown .drop-down .select-list { position: absolute; top: 0; left: 0; right:0; z-index: 1; margin-top: 30px; padding: 0; background-color: #fff; box-shadow: 0px 0px 8px 0px rgba(173,173,173,0.5); -moz-box-shadow: 0px 0px 8px 0px rgba(173,173,173,0.5); -webkit-box-shadow: 0px 0px 8px 0px rgba(173,173,173,0.5); display: none;}
+.lang-dropdown .drop-down .button:hover .select-list { display:block; }
+.lang-dropdown .drop-down .select-list li span:hover, .lang-dropdown .drop-down .select-list li span:focus { opacity: 1; }
+.login-section .lang-dropdown .drop-down { margin-top: 20px; }
+.login-section .lang-dropdown .drop-down .button span { color: #fff; }
+
+/*** Language Css ****/
+/***** Sidebar CSS Style *****/
+.wrapper { display: flex; width: 100%; position:relative; }
+#sidebar { min-width: 270px; max-width: 270px; min-height: inherit; background: #000; display: block; padding: 0; margin-bottom: 0; color: #fff; border:none; border-radius: 0; transition: all 0.3s; }
+#sidebar.active { margin-left: -270px; }
+.menu-container .crbnMenu .link-stack .nav-toggle { display: none; }
+.menu-container .crbnMenu .menu { list-style: none; margin: 0; padding: 20px; }
+.menu-container > .crbnMenu .menu > li { position: relative; margin: 0; padding: 0; }
+.menu-container > .crbnMenu .menu > li.drop-arrow::after { font-family: 'Glyphicons Halflings'; content:"\e259"; display: block; position: absolute; top: 20px; right: 0; border: none; font-size: 15px; color: #9a9a9a; transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; -moz-transition: all .5s ease; }
+.menu-container .crbnMenu .menu li a .fa { padding-right: 15px; font-size: 20px; color:#03adeb; vertical-align: middle; }
+.menu-container .crbnMenu .menu li a .menu-toggle .fa { border: none; font-size: 15px; color: #9a9a9a; padding-right: 0; }
+.menu-container .crbnMenu .menu li a { display: block; color: #fff; padding: 14px 5px 14px 0; font-size: 14px; text-decoration:none; transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; -moz-transition: all .5s ease; }
+.menu-container .crbnMenu .menu li a:hover{color:#03adeb;}
+.menu-container .crbnMenu .menu li a .nav-link-icon { margin-right: 10px; }
+.menu-container .crbnMenu .menu li a .menu-toggle { display: block; float: right; }
+.menu-container .crbnMenu .menu li ul { margin: 0; padding: 0 0 5px 20px; list-style: none; display: none; }
+.menu-container .crbnMenu .menu li ul li a { display: block; padding: 12px 5px; font-size: 13px; color: #fff; font-family: "Montserrat Medium"; }
+.menu-container .crbnMenu .menu li ul li a .fa { vertical-align: middle; font-size: 14px; color: #224c96; padding-right: 10px; margin-top: -2px; }
+.menu-container .crbnMenu .menu li a.current{color:#224c96 }
+.menu-container .crbnMenu .menu li.active a {color:#03adeb;}
+  
+/*************************/
+.small-box.bg-aqua { padding: 20px 0; background: #fff; margin: 0 0 15px 0; border: 2px solid #03adeb; text-align: center; }
+.small-box.bg-aqua .inner { display: flex; vertical-align: middle; align-items: center; text-align: center; justify-content: center; }
+.small-box.bg-aqua .inner h3 { color: #000000; font-weight: bold; margin: 0; padding: 0 15px; line-height: normal; float: left; font-size: 22px;}
+.small-box.bg-aqua .inner p { background: transparent; color: #000; padding: 0; margin: 0; line-height: normal; float: right; font-size: 20px; font-weight: 500; }
+/************************/
+
+/***deposit-fund-wrap*****/
+.white-bg.deposit-options-wrap{
+    display: block;
+    padding: 0;
+    background:transparent;
+	box-shadow: none;
+}
+.white-bg.deposit-options-wrap .grey-box {
+    background: #eaeaea;
+    padding: 30px 15px;
+    margin: 0 0 5px 0;
+}
+.white-bg.deposit-options-wrap>div {
+    box-shadow: 0px 0px 12px 0px rgba(173,173,173,0.4);
+    padding: 23px;
+    background: #fff;
+    width: 46%;
+    margin: 2%;
+}
+/******/
+/********/
+.table.newtable{ margin: 0 !important;}
+.table.newtable th{background: #f5f5f5; color: #000; text-align: center; padding: 20px 15px !important; border: 1px solid #dedede !IMPORTANT;}
+.table.newtable th i{font-size: 20px; margin: 0 0 8px 0; color: #0280ba;}
+.table.newtable td{background: #fff; text-align: center; color: #000; padding: 12px 20px !important; vertical-align: middle;}
+.table.newtable .link.transitions {background: #03adeb; padding: 3px 15px; color: #fff; font-size: 12px; border-radius: 4px;}
+
+.pagination {
+    margin: 12px 0 0 0 !important;
+}
+.pagination a {
+    padding: 2px 9px;
+    font-size: 12px;
+    border-radius: 0 !important;
+    background: #03adeb !IMPORTANT;
+}
+
+
+/*******
+
+
+/***** Right Content CSS Style *****/
+#content { width: 100%; padding: 30px 20px; min-height: 100vh; transition: all 0.3s; position:relative; overflow: hidden; }
+.white-bg { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0px 0px 12px 0px rgba(173,173,173,0.4); position:relative; }
+/***** Common Table CSS Style *****/
+.common-table { padding: 15px; box-shadow: 0px 0px 8px 0px rgba(173,173,173,0.5);}
+.common-table .table { margin-bottom:0; }
+.common-table .table tr th { background: #f5f5f5; color:#000000; font-size: 16px; font-family: 'Montserrat Light'; letter-spacing: 0.8px; padding: 10px 8px !important; text-transform:capitalize; text-align: center; border: 1px solid #dedede !important;  border-left: 0 !important;}
+.common-table .table tr th:first-child {border-left: 1px solid #dedede !important;}
+
+.common-table .table th, .common-table .table td { vertical-align: middle; }
+.common-table .table tr td { background: #fff; padding: 8px 8px; font-size: 15px; border-top: none; border-bottom: none; border-left: 1px solid #dedede; text-align: center; line-height: normal; border-bottom: 1px solid #dedede;}
+.common-table .table th:first-child, .common-table .table td:first-child { border-left: none; }
+.common-table .table tr td i { cursor:pointer; }
+.grey-icon, .grey-icon:hover, .grey-icon:focus { color:#5f5f5f; text-decoration:none; font-size: 16px; }
+.bold { font-family: 'Montserrat SemiBold'; }
+.pagination>li>a, .pagination>li>span { padding: 1px 8px; }
+/***** Modal CSS Style *****/
+.common-modal { text-align: center; padding: 0!important; }
+.common-modal:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.modal-open .modal.common-modal, .modal-open .modal, .modal-open .common-modal { padding-right: 0 !important; }
+.modal-backdrop, .common-modal { background: rgba(0,0,0,0.7); }
+.modal-backdrop.in { position: relative; opacity: 0; }
+.common-modal .modal-dialog { width: 92%; margin: 30px auto; max-width: 550px; display: inline-block; vertical-align: middle; box-shadow: 0px 0px 15px rgba(187, 187, 187, 0.7); -webkit-box-shadow: 0px 0px 15px rgba(187, 187, 187, 0.7); }
+.common-modal.error-popup .modal-dialog { max-width: 500px; box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.9); -webkit-box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.9); }
+.common-modal .modal-content { border-radius: 0; border: none; }
+.common-modal .modal-header { padding: 0; border-bottom: none; position: relative; }
+.common-modal .small-heading { margin: 18px 0 10px; }
+.common-modal .close { margin-top: 0px; position: absolute; z-index: 1; right: -6px; top: -10px; text-shadow: none; background: #7ab55c; color: #fff; opacity: 1; line-height: 0; padding: 12px 7px; border-radius: 20px; font-size: 18px; }
+.common-modal.error-popup .close { background: #e00000; }
+.common-modal .modal-body { padding: 14px 20px; }
+.message-box { text-align: center; }
+.message-box p { font-size: 18px; color: #fff; }
+.message-box p:last-child { margin-bottom:0; }
+/*<div class="modal fade in common-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="small-heading text-center">Heading Here</h4>
+        <button type="button" class="close" data-dismiss="modal">×</button>
+      </div>
+      <div class="modal-body clearfix">
+        <div class="message-box clearfix">
+          <figure>
+            <p>Your text here</p>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>*/
+.error-pg { margin:0 auto; text-align:center; }
+.message-box a { color: #fff; }
+.red { color: #dc0000 !important; }
+/***** Form CSS *****/
+.form-horizontal .form-group, .form-group { margin-right: 0; margin-left: 0; margin-bottom: 22px; position: relative; }
+.form-group.no-margin { margin-bottom: 0; }
+.form-group label { font-size: 14px; position: relative; display: block; font-family: 'Montserrat Medium'; color: #545454; margin-bottom: 0; font-weight: normal; }
+.form-control, .form-control:focus, textarea.form-control { background: transparent; border-width: 1px 1px 1px 0; border-color: #d2d2d2; border-style: solid; box-shadow: none; border-radius: 3px; color: #848484; height: 44px; position: relative; float: none !important; font-size: 14px; padding: 6px 10px; box-shadow: none !important; }
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control { background-color: transparent; color: #848484 !important; }
+textarea.form-control, textarea.form-control:focus { height: 70px; }
+.form-control.country-code { width: 25%; float: left !important; margin-right: 2%; background: transparent; border-width: 1px !important; text-align: center; }
+.form-control.phone-number { width: 73%; padding-left: 15px; border-width: 1px !important; }
+.form-group .input-group-addon { padding: 6px 12px; font-size: 16px; line-height: 1; color:#005085; text-align: center; background-color: transparent; border-radius: 3px 0 0 3px; border-width: 1px 0 1px 1px; border-color: #d2d2d2; border-style: solid; }
+.select-box { position: relative; }
+/*.select-box:after { content: '\f107'; color: #7ab55c; position: absolute; right: 10px; top: 8px; font-size: 16px; vertical-align: middle; font-family: 'Fontawesome'; }*/
+select { background: url(../images/down-arrow.png) 96% 18px no-repeat transparent !important; appearance: none; -webkit-appearance: none; }
+select:-moz-focusring {
+ color: transparent;
+ text-shadow: 0 0 0 #000;
+}
+.currency-box { display: block; padding: 9.6px 10px; border-radius: 3px; border: 1px solid #fff; }
+.select-btn { background: transparent; border-radius: 0 !important; padding: 0; width: 31.5%; color: #fff!important; box-shadow: none; font-family: 'Montserrat Medium' !important; outline: none !important; font-size: 15px !important; }
+.select-btn.select-btn-middle { margin-left: 2% !important; margin-right: 2.3%; border-left: 1px solid #fff; border-right: 1px solid #fff; }
+.before-login .select-btn.active, .before-login .select-btn.active{background: #000; box-shadow: none; color: #fff !important; }
+.select-btn.active, .select-btn.active{background:#000; box-shadow: none; color: #fff !important; }
+.form-group .form-control.file-field { padding-left: 5px; }
+.file { visibility: hidden; position: absolute; }
+.browse-btn, .browse-btn:focus { height: 44px; background: #03adeb; color: #fff; padding-left: 7px; font-size: 12px; padding-right: 7px; border-width: 0 0 1px 0; border-color: #03adeb; border-style: solid; border-radius: 0 8px 8px 0; }
+.form-group .tooltip.top { padding: 0; margin-top: 0; bottom: auto !important; right: 0 !important; top: auto !important; left: auto !important; opacity: 1; z-index:0; }
+.form-group.file-group .tooltip.top { margin-top: 48px; }
+.demo-form-check .tooltip { margin-top: 74px !important; }
+.form-group .checkbox .tooltip.top { margin-top: 20px; left: 0 !important; }
+/*.form-group .error { bottom: auto !important; right: 0 !important; top: auto !important; left: auto !important; opacity: 1; }*/
+.form-group .tooltip.top .tooltip-arrow { bottom: auto; left: auto !important; margin-left: 0; border-width: 6px 8px 0px; border-top-color: #a72323; top: -1px; transform: rotate(180deg); right: 5px; display: none; }
+.form-group .tooltip-inner { max-width: initial; padding: 2px 0; color: #ff0202; text-align: center; background-color: transparent; border-radius: 0; font-size: 12px; margin: 0 1px; }
+.before-login .form-group .tooltip-inner {color:#d40505;} 
+.help-block.form-error { position: absolute; margin: 0; font-size: 11px; /*bottom: 0;*/ color: #bd0000; line-height: 13px; }
+.link { display:inline-block; color: #03adeb; }
+.link:hover, .link:focus { color: #03adeb; }
+.cmn-btn, .scnd-btn{ 
+background: rgba(0,83,135,1);
+    background: -moz-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,83,135,1)), color-stop(100%, rgba(2,172,233,1)));
+    background: -webkit-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005387', endColorstr='#02ace9', GradientType=0 );
+display: inline-block;
+ color: #fff; 
+ padding: 5px 22px; 
+ font-family: 'Montserrat Medium'; 
+ font-size: 15px; 
+ text-align:center; 
+ outline: 0; 
+ transition: all .8s ease; 
+ -webkit-transition: all .8s ease; 
+ -ms-transition: all .8s ease; 
+ -o-transition: all .8s ease; 
+ -moz-transition: all .8s ease;
+ border-radius: 20px;
+}
+.cmn-btn:hover, .cmn-btn:focus, .scnd-btn:hover, .scnd-btn:focus{background:#03aae7; color: #f2faff; text-decoration:none;}
+.scnd-btn{
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+.scnd-btn:hover, .scnd-btn:focus { color: #000; }
+.full-wdth { width:100%; }
+/***** Upload Documents ******/
+.title-box { background: #7ab55c; text-align: center; padding: 19px 0; }
+.title-box .small-heading { color: #fff; font-size: 20px; }
+.title-box .small-heading i { padding-right: 10px; }
+.upload-section { border-bottom: 1px solid #ccc; }
+.upload-section:last-child { border-bottom: none; }
+.doc-box { background: #ebebeb; padding: 8px 0; text-align: center; text-transform: capitalize; color: #000; font-size: 13px; border: 1px solid #9c9c9c }
+/***** Placeholder ******/
+.form-control::placeholder {
+ color:#929292;
+ opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+color: #929292;
+}
+.form-control::-ms-input-placeholder {
+color: #929292;
+}
+/***** Checbox CSS Style ******/
+.checkbox { margin-bottom: 8px !important; }
+.form-group .checkbox label { font-size: 14px; padding-left: 0; }
+.checkbox label:after { content: ''; display: table; clear: both; }
+.checkbox .cr { position: relative; color: #fca500; display: inline-block; border: 1px solid #ccc; border-radius: 0; width: 1em; height: 1em; float: left; margin-right: 8px; margin-top: 1px; }
+.checkbox .cr .cr-icon { position: absolute; font-size: 12px; line-height: 0; top: 50%; left: 0%; }
+.checkbox .acceptance { padding-left: 0; color: #000; float: left; display: inline-block; width: 92%; }
+.checkbox label input[type="checkbox"] { opacity: 0; }
+.checkbox label input[type="checkbox"] + .cr > .cr-icon { transform: scale(3) rotateZ(-20deg); opacity: 0; transition: all .3s ease-in; }
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon { transform: scale(1) rotateZ(0deg); opacity: 1; }
+.checkbox label input[type="checkbox"]:disabled + .cr { opacity: .5; }
+/***** Checbox div *****/
+/*<div class="form-group">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+      <span class="acceptance">Text here</span>
+      </label>
+  </div>
+</div>*/
+/***** Radio Box ******/
+.radio-btns .form-check { display: inline-block; margin-right: 18px; }
+.radio-btns .form-check:last-child { margin-right: 0; }
+input[type="radio"] { position: absolute; right: 9000px; }
+input[type="radio"] + .label-text:before { content: "\f10c"; font-family: "FontAwesome"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; width: 1em; display: inline-block; margin-right: 5px; }
+input[type="radio"]:checked + .label-text:before { content: "\f192"; color: #14a7cc; animation: effect 250ms ease-in; }
+input[type="radio"]:disabled + .label-text { color: #636363; }
+input[type="radio"]:disabled + .label-text:before { content: "\f111"; color: #14a7cc; }
+/***** Radio div *****/
+/*<div class="form-group radio-btns">
+  <div class="form-check">
+    <label>
+      <input type="radio" name="radio">
+      <span class="label-text">Text here</span></label>
+  </div>
+</div>*/
+/**** NEW Check box ******/
+input[type="checkbox"], input[type="radio"] { position: absolute; right: 9000px; }
+input[type="checkbox"] ~ .label-text:before {
+ content: "\f096";
+ font-family: "FontAwesome";
+ font-size: 18px;
+ speak: none;
+ font-style: normal;
+ font-weight: normal;
+ font-variant: normal;
+ text-transform: none;
+ line-height: 1;
+ -webkit-font-smoothing:antialiased;
+ width: 1em;
+ display: inline-block;
+ margin-right: 6px;
+ position: relative;
+ top: 1px;
+}
+input[type="checkbox"]:checked ~ .label-text:before {
+ content: "\f14a";
+ color: #fff;
+ animation: effect 250ms ease-in;
+}
+input[type="checkbox"]:disabled ~ .label-text {
+ color: #aaa;
+}
+input[type="checkbox"]:disabled ~ .label-text:before {
+ content: "\f0c8";
+ color: #ccc;
+}
+.form-group .real-check .tooltip.top, .form-group .demo-check .tooltip.top { margin-top: 20px; left: 0 !important; }
+.main-content-wrap input[type="checkbox"]:checked ~ .label-text:before {
+ color: #000000;
+}
+/*<div class="form-group">
+  <div class="form-check demo-check">
+    <label>
+      <input type="checkbox" name=""  id="" checked>
+      <span class="label-text">Text Here</label>
+  </div>
+</div>*/
+/***** Loader CSS Style ******/
+.cssloader {
+  padding-top: calc(45vh - 25px);
+}
+
+/** loader **/
+.sh1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #354952 transparent transparent transparent;
+  margin: 0 auto;
+  animation: shk1 1s ease-in-out infinite normal;
+}
+
+.sh2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent  transparent #03adeb transparent;
+  margin: -50px auto 0;
+  animation: shk2 1s ease-in-out infinite alternate;
+}
+
+/** animation starts here **/
+@keyframes shk1 {
+  0% {
+    transform: rotate(-360deg);
+  }  
+  
+  100% {
+  }
+}
+
+@keyframes shk2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+  }
+}
+
+.lt {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    z-index: 9999;
+    background: rgba(6, 8, 7, 0.7);
+}
+/************************/
+ 
+/***** Login Page CSS Style *****/
+.before-login {color: #fff; }
+.before-login .main-footer { color: #5f5f5f; background: #fdfdfd; display:none; }
+.login-section { background-image: url(../images/login-bg.jpg); background-color: #03adeb; background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; width: 100%; padding: 0; display: table; height: 100%; position: absolute; top: 0; left: 0; margin: 0; }
+.cntr-box { padding: 0; vertical-align: middle; display: table-cell; margin: 0; }
+.login-box { padding: 15px 0; margin: 0 auto; width: 44%; max-width: 500px; }
+.site-logo {
+    background: #fff;
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 3px 10px 0px rgba(150,150,150,1);
+    -moz-box-shadow: inset 0px 3px 10px 0px rgba(150,150,150,1);
+    box-shadow: inset 0px 3px 10px 0px rgba(150,150,150,1);
+    box-shadow: 0 0 25px #354c5f;
+    border-radius: 15px;
+}
+.login-heading { text-align: center; margin: 35px 0; color: #ffffff; font-family: 'Montserrat Medium'; font-size: 25px; }
+.login-body { margin-top: 30px; }
+.login-body .form-group label, .login-body .form-horizontal .form-group .checkbox label { color: #fff; }
+.login-body .form-group .input-group-addon { color: #ffffff; border-color: #fff; padding: 6px 15px; font-size: 20px; }
+.login-body .form-control, .login-body .form-control:focus, .login-body textarea.form-control { border-color: #fff; color:#fff; }
+.login-body .form-control[disabled], .login-body .form-control[readonly], .login-body fieldset[disabled] .form-control { color: #fff !important; }
+.login-body select { background: url(../images/white-arrow.png) 96% 18px no-repeat transparent !important; }
+.login-body select option { color: #494949; }
+.login-body .checkbox .cr { background: #fff; border: 1px solid #fff; }
+.forgot-pass-text { text-align: right; margin-top: 9px; }
+.forgot-pass-text a { color: #fff; cursor:pointer; text-decoration:none; }
+.forgot-pass-text a:hover, .forgot-pass-text a:focus { color: #000; }
+.new-accnt-txt { font-family: 'Montserrat Medium'; padding-top: 18px; text-align: right; color: #fff; font-size: 18px; }
+.new-accnt-txt a { color: #fff; text-decoration:none; }
+.new-accnt-txt a:hover, .new-accnt-txt a:focus{color:#000; }
+.btn-login, .inner-blck-btn{ 
+  background:rgba(0,83,135,1);
+  background: -moz-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,83,135,1)), color-stop(100%, rgba(2,172,233,1)));
+  background: -webkit-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+  background: -o-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+  background: -ms-linear-gradient(top, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,83,135,1) 0%, rgba(2,172,233,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005387', endColorstr='#02ace9', GradientType=0 );
+  padding: 10px 60px;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 45px;
+  transition: 0.5s;
+  border: 0;
+}
+
+.btn-login:hover, .btn-login:focus { 
+    background: #03aae7;
+    color: #f2faff;
+}
+.inner-blck-btn { background: #3d3d3d; border: 1px solid #3d3d3d; color: #fff; }
+.inner-blck-btn:hover, .inner-blck-btn:focus { background: #fff; color: #3d3d3d; }
+.cancel-btn-box { text-align:right; }
+/***** Account Steps CSS ******/
+.acnt-step-box { padding-top: 15px; padding-bottom: 15px; }
+.account-top-frame { color: #fff; padding-bottom: 20px; text-align: center; margin-top: -12px; font-family: 'Montserrat Medium'; }
+.account-top-frame a { color:#fff; }
+.white-btn { background: transparent; border: 1px solid #fff; color: #fff; padding: 5px 18px 4px; font-size: 17px; border-radius: 0; outline: 0; text-transform: uppercase; }
+.white-btn:hover, .white-btn:focus { background: #fca500; border: 1px solid #fca500; color: #fff; }
+.account-links-box { padding-top: 20px; padding-bottom: 5px; font-size: 24px; }
+.account-links-box .acnt-link { font-family: 'Montserrat Light'; color: #fff; padding: 0 15px; line-height: normal; border-right: 2px solid #fff; }
+.account-links-box .acnt-link.active { font-family: 'Montserrat Bold'; }
+.account-links-box .acnt-link:last-child { padding-left: 10px; padding-right:0; border-right: none; }
+.acnt-step-box .login-body .form-horizontal .form-group .checkbox label { /*display: flex; align-items: center; justify-content: center;*/ }
+.acnt-step-box .login-body .form-control, .acnt-step-box .login-body .form-control:focus, .acnt-step-box .login-body textarea.form-control { border-left-width:1px; }
+.acnt-step-box .checkbox .cr { float: none; margin-top: 0px; }
+.acnt-step-box .btn-login { padding: 10px 30px; font-family: 'Montserrat SemiBold'; font-size: 20px; }
+.acnt-step-box .demo-check a,
+.acnt-step-box .real-check a{color: #000;}
+/***** Placeholder ******/
+.login-body .form-control::placeholder {
+ color: #fff;
+ opacity: 1;
+}
+.login-body .form-control:-ms-input-placeholder {
+color: #fff;
+}
+.login-body .form-control::-ms-input-placeholder {
+color: #fff;
+}
+/***** Thankyou page *****/
+.thank-top { text-align: center; margin-bottom: 35px; padding-bottom: 12px; border-bottom: 1px solid #e8e8e8; }
+.thank-top i { font-size: 110px; }
+.thank-top .medium-heading { font-size: 30px; padding-bottom: 0; margin-top: 20px; margin-bottom: 15px; text-transform: inherit; border-bottom: none; }
+.my-acnt-btn { text-align:right; }
+.black-text { color:#000; padding-top:8px; }
+.thank-top .black-text{color:#000;}
+/***** Markets News *****/
+.news-wrap .pr247ndwg_container { background-color: #fff !important; padding: 0 !important; box-shadow: none !important; margin: 0 0 0 -10px; }
+.pr247ndwg_item { border-bottom: 1px solid #e0e0e0 !important; }
+h3.pr247ndwg_widget_title, hr.pr247ndwg_divider, .pr247ndwg_footer { display: none !important; }
+.pr247ndwg_date, .pr247ndwg_brief, .pr247ndwg_body { font-size: 10pt !important; margin-top: 5px; }
+.pr247ndwg_headline { color: #4c4c4c !important; font-size: 10pt !important; }
+/***** Footer CSS Style *****/
+footer { position:relative; }
+.main-footer { padding:12px 0; font-size: 13px; text-align:center; color:#fff; background: #3d3d3d; }
+/***** After Login Pages CSS Style *****/
+.flex-wrap { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.flex-wrap + .flex-wrap { margin-top: 30px; }
+.cmn-btm-pad { padding-bottom: 30px; }
+.top-btn-wrap .cmn-btn, .top-btn-wrap .scnd-btn { font-size: 16px; padding: 12px 5px; }
+.account-table-section .common-table { padding: 20px; }
+.common-box { background: #fff; position: relative; padding: 24px 15px; box-shadow: 0px 0px 8px 0px rgba(173,173,173,0.5); height:100%; }
+.common-box .form-group, .form-group { margin-bottom: 0; }
+.common-box .small-heading { color: #000; }
+.widget-wrap { position: relative; }
+.widget-wrap:after { position: absolute; content: ""; background: #fff; right: 1px; bottom: 7px; width: 30px; height: 28px; border-radius: 10px 0 0 10px; }
+.news-wrap { max-height: 350px; overflow-y: scroll; }
+.news-wrap.inner-news { max-height: 512px; }
+.success-msg { padding: 0; background: #e5ffe9; border: 1px solid #3e8249; position: relative; }
+.msg-header { position: relative; }
+.msg-body { padding: 12px 20px; color: #000; }
+.success-msg .close-btn { margin-top: 0px; position: absolute; z-index: 1; right: -10px; top: -12px; text-shadow: none; background: #3e8249; color: #fff; opacity: 1; line-height: 0; padding: 12px 7px; border-radius: 20px; font-size: 18px; border: none; }
+.success-msg.error-msg { background: #ffd7d7; border: 1px solid #ce0000; }
+.error-msg .msg-header .small-heading { color: #ce0000; font-size: 20px; }
+.error-msg .close-btn { background: #ce0000; }
+.success-msg p { color:#000; }
+.main-content-wrap .btn-login, .main-content-wrap .inner-blck-btn { text-transform: inherit; }
+.main-content-wrap .currency-box { border: 1px solid #d2d2d2; }
+.main-content-wrap .currency-box .select-btn { color: #545454!important; }
+.main-content-wrap .currency-box .select-btn.active{color: #fff !important; }
+.main-content-wrap .currency-box .select-btn.select-btn-middle { border-left: 1px solid #d2d2d2; border-right: 1px solid #d2d2d2; }
+
+.main-content-wrap .form-group .checkbox.real-check .tooltip-inner, .main-content-wrap .form-group .checkbox.demo-check .tooltip-inner { text-align: left; }
+/***** Right sidebar CSS Style *****/
+.right-icon { width: 45px; height: 45px; background-image: url(../images/sprite.png); background-repeat: no-repeat; background-position: -96px -12px; margin-right: 2px; display: inline-block; }
+.right-icon.icon-02 { background-position: -96px -96px; }
+.right-icon.icon-03 { background-position: -97px -184px; }
+.right-icon.icon-04 { background-position: -16px -284px; }
+.right-icon.icon-05 { background-position: -16px -378px; }
+.media-box { padding: 24px 15px; font-size: 16px; font-family: 'Montserrat Medium'; }
+.media-box:nth-child(odd) { background: #f2f2f2; }
+
+
+/*****ifrm-direct*******/
+#safe-ifrm-direct {
+    height: 750px;
+    background: #ececee;
+    min-height: max-content;
+    padding: 25px;
+    width: 100%;
+    max-width: 660px; 
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.login-box.gumball-pay {
+    width: 100%;
+    max-width: 700px;
+}
+
+.login-box.gumball-pay .form-horizontal {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+/************* RESPONSIVE MEDIA STARTS *************/
+@media (max-width: 1750px) {
+}
+@media (max-width: 1600px) {
+}
+@media (max-width: 1500px) {
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1366px) {
+}
+@media (max-width: 1301px) {
+.media-box { padding: 24px 12px; font-size: 15px; }
+}
+@media (max-width: 1200px) {
+/***** Sidebar CSS Style *****/
+#sidebar { margin-left: -270px; position: absolute; z-index: 9999; height: 100%; }
+#sidebar.active { margin-left: 0; }
+#sidebarCollapse span { display: none; }
+.sidebar-menu { padding: 10px 20px 20px; }
+/***** Sidebar CSS Style *****/
+.menu-container .crbnMenu .menu { padding: 15px 20px 15px; }
+.menu-container .crbnMenu .menu li a { padding: 10px 5px 10px 0; }
+.menu-container > .crbnMenu .menu > li.drop-arrow::after { top: 14px; font-size: 13px; }
+.menu-container .crbnMenu .menu li a .fa { font-size: 18px; padding-right: 10px; }
+.menu-container .crbnMenu .menu li ul { padding: 8px 0 8px 24px; }
+.menu-container .crbnMenu .menu li ul li a { padding: 6px 5px; font-size: 13px; }
+/***** Right Content CSS Style *****/
+#content { padding: 30px 0; }
+.media-box { padding: 24px 15px; }
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 1024px) {
+.common-table .table tr th, .common-table .table tr td { font-size: 14px; }
+.login-box { width: 50%; }
+}
+@media (max-width: 991px) {
+.no-left-pad { padding-left:15px; }
+.no-right-pad { padding-right:15px; }
+.flex-wrap { flex-direction: column; }
+/***** Header CSS Style *****/
+.navbar-bars { left: 58%; }
+.navbar-bars .navbar-toggle { padding: 2px 8px; }
+/***** Account Steps CSS ******/
+.currency-box { padding: 7.5px 4px; }
+.select-btn { font-size: 13px !important; }
+.flex-wrap + .flex-wrap { margin-top: 0; }
+.common-box { margin-bottom: 30px; }
+.right-sidebar { padding-top:30px; }
+}
+@media screen and (min-width: 770px) and (max-width: 900px) {
+/***** Header CSS Style *****/
+.navbar-bars { left: 70%; }
+/***** Login CSS Style *****/
+.login-box { width: 62%; }
+}
+@media (max-width: 768px) {
+/***** Header CSS Style *****/
+.navbar-bars { left: 74%; }
+/***** Dashboard CSS Style *****/
+.top-btn-wrap .cmn-btn, .top-btn-wrap .scnd-btn { font-size: 14px; padding: 12px 3px; }
+.spacetop-xs { margin-top: 3px; }
+/***** Login CSS Style *****/
+.login-box { width: 62%; }
+/***** After Login Pages CSS Style *****/
+.main-content-wrap .form-group .form-check.real-check .tooltip { margin-top: 40px; }
+}
+@media (max-width: 767px) {
+/***** Dashboard CSS Style *****/
+.top-btn-wrap .cmn-btn, .top-btn-wrap .scnd-btn { font-size: 16px; padding: 12px 5px; margin-bottom: 15px; }
+.common-box .small-heading { margin-top: 0; margin-bottom: 18px; }
+/***** Other CSS Style *****/
+.logo { width: 100%; max-width: 100%;}
+.navbar-bars { left: 15px; top: auto; z-index: 1; bottom: -50px; }
+.form-group { display: block; }
+.inline-upload-box .input-group { display: block; }
+.inline-upload-box .file-upload-btn { display: block; width: 100%; font-size: 13px; padding: 7px 8px; }
+.row-flex, row-eq-height { flex-direction: column; }
+.white-bg { padding: 0; box-shadow: none; }
+.doc-box { margin-bottom: 8px; }
+.right-sidebar .row-flex { flex-direction: inherit; }
+/***** Account Steps CSS ******/
+.currency-box { padding: 7.5px 10px; }
+.select-btn { font-size: 15px !important;}
+
+#safe-ifrm-direct{height: 670px;}
+.login-box.gumball-pay .form-horizontal {
+    width: 100%;
+    margin: 0 auto;
+}
+
+}
+@media (max-width: 680px) {
+.login-box { width: 70%; }
+}
+@media (max-width: 568px) {
+#sidebar { height: 450px; overflow: scroll; }
+.login-box { width: 84%; }
+.inner-section { padding: 30px 0px; }
+.form-group .demo-check .tooltip.top { margin-top: 40px; }
+
+.white-bg.deposit-options-wrap>div{padding:15px; width: 94%; margin: 3%;}
+
+#safe-ifrm-direct{height: 680px;} 
+
+}
+@media (max-width: 480px) {
+.login-box { width: 98%; }
+.upload-section .col-xxs { width: 100%; }
+
+
+
+}
+@media (max-width: 426px) {
+.col-xxs { width: 100%; }
+.top-btn-wrap .cmn-btn, .top-btn-wrap .scnd-btn { font-size: 15px; }
+.common-box .small-heading { text-align: center; }
+/***** Login CSS Style *****/
+.forgot-pass-text { text-align: left; margin-top: -5px; margin-bottom: 15px; }
+.new-accnt-txt { text-align: left; }
+.form-group .real-check .tooltip.top { margin-top: 40px; }
+.my-acnt-btn { margin-top: 10px; }
+.main-content-wrap .btn-login, .main-content-wrap .inner-blck-btn { font-size: 16px; width:100%; text-align:center; }
+.main-content-wrap .form-group .real-check .tooltip.top { margin-top: 60px; }
+.mbl-flex { display: flex; flex-direction: column-reverse; }
+.start-btn a, .my-acnt-btn a { width: 100%; text-align: center;}
+
+
+
+
+}
+@media (max-width: 376px) {
+/***** Login CSS Style *****/
+.login-box { padding: 15px 0; }
+.login-heading { font-size: 22px; }
+.acnt-step-box .btn-login { padding: 10px 20px; width: 100%; }
+
+#safe-ifrm-direct{height: 760x;}
+
+}
+@media (max-width: 360px) {
+}
+@media (max-width: 321px) {
+.user-detail { padding: 10px 22px 10px 10px; }
+.user-detail a span:after { right: -16px; }
+.notification-dropdown { width: 245px; }
+.notification-detail { margin-right: 12px; }
+/***** Login CSS Style *****/
+.login-heading { font-size: 20px; }
+.form-group .demo-check .tooltip.top { margin-top: 60px; }
+
+#safe-ifrm-direct{height: 840px;}
+
+
+}
+a.cmn-btn-new {
+    background: #03adeb;
+    display: block;
+    color: #fff;
+    padding: 5px 22px;
+    font-family: 'Montserrat Medium';
+    font-size: 15px;
+    text-align: center;
+    outline: 0;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+}
